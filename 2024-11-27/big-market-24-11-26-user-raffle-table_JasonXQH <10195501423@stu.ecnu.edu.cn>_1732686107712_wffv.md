@@ -1,0 +1,19 @@
+根据提供的Git diff记录，以下是针对代码变更的评审：
+
+### 1. `.idea/inspectionProfiles/Project_Default.xml` 文件
+- **更改**：将Java语言的重复代码检测的最小代码行数从57行增加到80行。
+- **评审**：这是一个合理的更改，因为随着代码复杂性的增加，重复代码的检测阈值也应该提高。这样可以避免一些小的重复代码片段被误报为问题。
+
+### 2. `RedisClientConfig.java` 文件
+- **更改**：引入了`JsonJacksonCodec`作为Redis的编解码器。
+- **评审**：使用JSON编解码器是一个好的选择，因为它可以提供更好的兼容性和灵活性。不过，需要确保Redis服务器和客户端都支持JSON格式。
+
+### 3. `IRaffleActivityAccountDayMapper.xml`, `IRaffleActivityAccountMapper.xml`, `IRaffleActivityAccountMonthMapper.xml`, `IRaffleActivityOrderMapper.xml`, `IUserRaffleOrderMapper.xml` 文件
+- **更改**：增加了多个MyBatis映射文件，用于处理抽奖活动相关的数据库操作，包括插入、更新、查询等。
+- **评审**：这些映射文件的添加是为了支持新的业务逻辑，这是合理的。不过，需要注意SQL语句的效率和正确性。
+
+### 4. `RaffleActivityPartakeServiceTest.java`, `RaffleOrderTest.java`, `RaffleOrderTest.java` 文件
+- **更改**：增加了新的测试类和测试用例，用于测试抽奖活动相关的服务。
+- **评审**：测试是确保代码质量的重要环节，这些测试类的添加是必要的。不过，需要确保测试用例的全面性和覆盖性。
+
+### 5. `IActivityRepository.java`, `CreatePartakeOrderAggregate.java`, `CreateOrderAggregate.java`, `PartakeRaffleActivityEntity.java`, `RaffleActivityAccountDayEntity.java`, `RaffleActivityAccountMonthEntity.java`, `UserRaffleOrderEntity.java`, `UserRaffleOrderStateVO.java`, `IRaffleActivityPartakeService.java`, `IRaffleActivitySkuStockService.java`, `AbstractRaffleActivityPartake.java`, `RaffleActivityPartakeService.java`, `AbstractRaffleActivityAccountQuota.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java`, `RaffleActivityAccountQuotaService.java
